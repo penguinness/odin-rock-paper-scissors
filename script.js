@@ -68,8 +68,10 @@ function playGame() {
 
   if (humanScore > computerScore) {
     alert('Congratulations! You won the game!');
-  } else {
+  } else if (humanScore < computerScore) {
     alert('You lost. Try again.');
+  } else {
+    alert(`It's a draw!`);
   }
 }
 

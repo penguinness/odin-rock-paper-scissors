@@ -11,3 +11,22 @@ function getComputerChoice() {
     return 'Scissors';
   }
 }
+
+function getHumanChoice() {
+  let humanChoice = prompt(`Please type "Rock", "Paper", or "Scissors".`);
+  if (humanChoice.toLowerCase() === 'rock') {
+    return 'Rock';
+  } else if (humanChoice.toLowerCase() === 'paper') {
+    return 'Paper';
+  } else if (humanChoice.toLowerCase() === 'scissors') {
+    return 'Scissors';
+  } else {
+    alert(
+      `Invalid entry! Please enter a valid move - "Rock", "Paper, or "Scissors".`
+    );
+  }
+}
+
+let humanScore = 0;
+
+let computerScore = 0;

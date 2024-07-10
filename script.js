@@ -61,6 +61,11 @@ function playGame() {
     const computerSelection = getComputerChoice().toLowerCase();
     playRound(humanSelection, computerSelection);
   }
+  if (humanScore > computerScore) {
+    alert('Congratulations! You won the game!');
+  } else {
+    alert('You lost. Try again.');
+  }
 }
 
 playGame();

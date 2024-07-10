@@ -75,4 +75,6 @@ function playGame() {
   }
 }
 
-playGame();
+while (true) {
+  playGame();
+}

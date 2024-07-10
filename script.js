@@ -29,19 +29,15 @@ function getHumanChoice() {
   }
 }
 
-let humanScore = 0;
-
-let computerScore = 0;
-
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === 'paper' && computerChoice === 'rock') {
     humanScore++;
     alert('You win! Paper beats Rock.');
   } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-    humanChoice++;
+    humanScore++;
     alert('You win! Rock beats Scissors.');
   } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-    humanChoice++;
+    humanScore++;
     alert('You win! Scissors beats Paper.');
   } else if (computerChoice === 'paper' && humanChoice === 'rock') {
     computerScore++;
@@ -58,11 +54,15 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
+  humanScore = 0;
+  computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
     const humanSelection = getHumanChoice().toLowerCase();
     const computerSelection = getComputerChoice().toLowerCase();
     playRound(humanSelection, computerSelection);
   }
+
   if (humanScore > computerScore) {
     alert('Congratulations! You won the game!');
   } else {

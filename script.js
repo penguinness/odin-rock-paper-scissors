@@ -56,15 +56,21 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+//TODO:
+// 1. remove playGame() - we play with buttons only
+// 2. add playRound event listeners to the button
+// 3. change rule to first to 5 wins
+// 4. maybe style the buttons and result display a little (center them, put results bigger, proper fonts, etc.)
+
 function playGame() {
   humanScore = 0;
   computerScore = 0;
 
-  for (let i = 0; i < 5; i++) {
-    const humanSelection = getHumanChoice().toLowerCase();
-    const computerSelection = getComputerChoice().toLowerCase();
-    playRound(humanSelection, computerSelection);
-  }
+  // for (let i = 0; i < 5; i++) {
+  //   const humanSelection = getHumanChoice().toLowerCase();
+  //   const computerSelection = getComputerChoice().toLowerCase();
+  //   playRound(humanSelection, computerSelection);
+  // }
 
   if (humanScore > computerScore) {
     alert('Congratulations! You won the game!');
@@ -73,8 +79,4 @@ function playGame() {
   } else {
     alert(`It's a draw!`);
   }
-}
-
-while (true) {
-  playGame();
 }

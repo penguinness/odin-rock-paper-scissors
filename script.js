@@ -59,6 +59,7 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
   humanScore = 0;
   computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
     const humanSelection = getHumanChoice().toLowerCase();
     const computerSelection = getComputerChoice().toLowerCase();
